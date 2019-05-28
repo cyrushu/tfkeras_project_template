@@ -1,8 +1,9 @@
-将project重命名
-rename project into project name
+### tensorflow keras 项目模板
+* 将project重命名
+	rename project into project name
 
-修改setup.py里面项目名字，模板即可使用
-modify setup.py project name and template will works fine
+* 修改setup.py里面项目名字，模板即可使用
+	modify setup.py project name and template will works fine
 
 此模板由[Keras-Project-Template](https://github.com/Ahmkel/Keras-Project-Template)修改而来 
 Template modified with project: [Keras-Project-Template](https://github.com/Ahmkel/Keras-Project-Template)
