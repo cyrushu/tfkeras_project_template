@@ -3,4 +3,4 @@ data
 *checkpoints
 *.pkl
 logs
-exeriments
+experiments
