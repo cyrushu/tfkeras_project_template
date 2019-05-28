@@ -1,0 +1,10 @@
+callbacks:
+  dirname: null
+  checkpoint_save_every: 5
+  checkpoint_max_to_keep: 5
+  checkpoint_save_on_train_end: False
+data_generator:
+  name: "DataGenerator.get_train_val_generator"
+  datah5: "/abs/path/to/data/hdf5"
+  train_test_traio: 0.1
+  shuffle: True

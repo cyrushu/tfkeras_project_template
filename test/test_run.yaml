@@ -1,0 +1,33 @@
+pipeline:
+  name: "fpautoencoder"
+  method: "train"
+train:
+  epochs: 10
+  batch_size: 32
+  data_path: ""
+model:
+  name: "AutoEncoder.autoencoder"
+  parameters:
+    inputShape:
+      - 64
+      - 64
+      - 1
+    latent_size: 64
+data_generator:
+  name: "DataGenerator.get_train_val_generator"
+  datah5: "../data/cache/tf_fpwalls_64x64_1gs.hdf5"
+  train_test_traio: 0.9
+  shuffle: True
+optimizer:
+  name: "tensorflow.train.AdamOptimizer"
+  parameters:
+    learning_rate: 0.0001
+    beta1: 0.9
+    # lr: 0.0001
+    # beta_1: 0.9
+callbacks:
+  # default "/project_root/experiments" 
+  # checkpoint_dir default "{dirname}/{pipeline_name}_{date}/checkpoints
+  # tensorboard_log_dir default "{dirname}/{pipeline_name}_{date}/logs"
+  dirname: null
+  checkpoint_save_every: 1
