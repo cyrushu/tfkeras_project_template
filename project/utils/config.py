@@ -25,7 +25,7 @@ def post_process_config(config):
     else:
         config_callbacks["folder_name"] = config_callbacks["dirname"]
 
-        config_callbacks["checkpoint_dir"] = config_callbacks.get(
+    config_callbacks["checkpoint_dir"] = config_callbacks.get(
         "checkpoint_dir",
         os.path.join(config_callbacks["folder_name"], "checkpoints"))
 

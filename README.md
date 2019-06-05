@@ -1,4 +1,4 @@
-### tensorflow keras 项目模板
+## tensorflow keras 项目模板
 * 将project重命名
 	rename project into project name
 
@@ -8,6 +8,7 @@
 此模板由[Keras-Project-Template](https://github.com/Ahmkel/Keras-Project-Template)修改而来 
 Template modified with project: [Keras-Project-Template](https://github.com/Ahmkel/Keras-Project-Template)
 
+### 使用方法 / Instructions
 1. setup.py配置项目依赖
 
     Use setup.py to configure project required packages
@@ -22,3 +23,9 @@ Template modified with project: [Keras-Project-Template](https://github.com/Ahmk
     make a version of project/config/run_train.yaml and configure the yaml file for training/other usage
 
 5. python train.py -c my_run_train.yaml
+
+
+### 模板优势 / Advance
+* 多网络-多输入-多参数 由yaml配置
+* 自动保存配置与网络结构
+

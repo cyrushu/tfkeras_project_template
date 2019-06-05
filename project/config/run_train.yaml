@@ -1,10 +1,9 @@
 pipeline:
   name: "fpautoencoder"
-  method: "train"
+  # method: "train" -- not useful currently
 train:
   epochs: 100
   batch_size: 32
-  data_path: ""
 model:
   name: "AutoEncoder.autoencoder"
   parameters:
