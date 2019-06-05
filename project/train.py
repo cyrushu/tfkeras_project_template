@@ -20,12 +20,6 @@ def main():
         model, _ = factory.create("models." + config["model"]["name"])(
             **config["model"]["parameters"])
 
-    model_yaml = model.to_yaml()
-    with open(
-            os.path.join(config["callbacks"]["folder_name"], "model.yaml"),
-            "w") as f:
-        f.write(model_yaml)
-
     optimizer = factory.create(
         config["optimizer"]["name"])(**config["optimizer"]["parameters"])
     model.compile(loss="mse", optimizer=optimizer)
@@ -38,6 +32,12 @@ def main():
             verbose=1,
             period=config["callbacks"]["checkpoint_save_every"])
 
+    model_yaml = model.to_yaml()
+    folder_save_dir = config["callbacks"]["folder_name"]
+    with open(os.path.join(folder_save_dir, "model.yaml"), "w") as f:
+        f.write(model_yaml)
+    with open(os.path.join(folder_save_dir, "config.yaml"), "w") as f:
+        yaml.dump(config, f)
     #  saver_callback = factory.create(
     #  "callbacks.CheckpointManagerCallback.CheckpointManagerCallback")(
     #  model, config)

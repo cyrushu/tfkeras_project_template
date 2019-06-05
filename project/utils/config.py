@@ -39,8 +39,4 @@ def parse_user_config(user_config_path):
         config_user = yaml.load(f)
     dict_merge(config_base, config_user)
     post_process_config(config_base)
-    config_save_dir = os.path.join(
-        make_valid_dir(config_base["callbacks"]["folder_name"]), "config.yaml")
-    with open(config_save_dir, "w") as f:
-        yaml.dump(config_base, f)
     return config_base
