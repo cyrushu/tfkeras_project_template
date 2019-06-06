@@ -5,6 +5,7 @@ from utils.args import Parser
 from utils.config import parse_user_config
 from utils import utils
 from utils import factory
+import yaml
 
 
 def main():
